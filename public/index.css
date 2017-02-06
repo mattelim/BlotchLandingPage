@@ -1,6 +1,6 @@
 body {
   background-image: url("img/Background_Base.jpg");
-  background-size: 120% 120%;
+  background-size: 120%;
   font-family:"Roboto Mono",sans-serif;
   color: lightgrey;
   font-size: 14px;
@@ -10,12 +10,22 @@ body {
   height: 15%;
 }
 
+#topGrid {
+  overflow: hidden;
+  width: 100%;
+  height: 3%;
+  background-image: url("img/Background_Grid-top.png");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
 #GridContainer {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-image: url("img/Background_Grid.png");
-  background-size: 120% 120%;
+  background-image: url("img/Background_Grid-main.png");
+  background-size: 120%;
   text-align: center;
 }
 
@@ -75,7 +85,7 @@ a:link {
 }
 
 a:visited {
-	color: grey;
+	color: lightgrey;
 }
 
 a:hover,a:focus {
@@ -84,14 +94,39 @@ a:hover,a:focus {
 }
 
 a:active {
-	color: grey;
+	color: lightgrey;
+}
+
+@media screen and (max-width: 850px) {
+  #topGrid {
+    height: 2%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #topGrid {
+    height: 1.5%;
+  }
 }
 
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
+and (min-device-width: 320px)
+and (max-device-width: 568px) {
   #topSpace {
     height: 5%;
+  }
+
+  body {
+    background-size: 200%;
+  }
+
+  #topGrid {
+    height: 2%;
+    background-size: 200%;
+  }
+
+  #GridContainer {
+    background-size: 200%;
   }
 
   #blotchLogo {
@@ -112,7 +147,7 @@ and (max-device-width : 568px) {
 	}
 
 	a:link,a:visited {
-		color:#e01f4c;
-		border-bottom:2px solid #e01f4c;
+		color: white;
+		border-bottom:2px solid white;
 	}
 }
